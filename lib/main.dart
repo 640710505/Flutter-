@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'answer3.dart';
-import 'answer1.dart';
-import 'answer2.dart';
-import 'answer4.dart';
-import 'answer5.dart';
+import 'model/aqi.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +19,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // home: const GreetingWidget(name: '640710505 Chonlachat Buangam'));
-      home: Portal(),
+      home: const aqi(),
     );
   }
 }
@@ -35,8 +32,8 @@ class GreetingWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Demo App'),
-          backgroundColor: Colors.pink,
+          title: const Text('Air Quality Index (AQI)'),
+          // backgroundColor: Colors.pink,
         ),
         body: Center(child: Text('Hello, $name')));
   }
